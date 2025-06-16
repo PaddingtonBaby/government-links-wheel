@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <title>SA-SF FORUMS / Mailen Role Play</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;600;700&family=Exo+2:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body>
+<canvas id="cloudCanvas" style="position: absolute; top: 0; left: 0;"></canvas>
+<div class="loader-wrapper">
+    <div class="loader"></div>
+  </div>
+  <div class="header">
+    <img src="assets/images/white_logo.png" alt="Логотип сервера" class="logo">
+    <h1 class="title">San Andreas State Factions</h1>
+  </div>
+  <div class="social-sidebar">
+    <a href="https://vk.com/sasf.mailen" class="social-link vk" target="_blank" aria-label="ВКонтакте">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 548.358 548.358" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M545.451 400.298c-.664-1.431-1.283-2.618-1.858-3.569-9.514-17.135-27.695-38.167-54.532-63.102l-.567-.571-.284-.28-.287-.287h-.288c-12.18-11.611-19.893-19.418-23.123-23.415-5.91-7.614-7.234-15.321-4.004-23.13 2.282-5.9 10.854-18.36 25.696-37.397 7.807-10.089 13.99-18.175 18.556-24.267 32.931-43.78 47.208-71.756 42.828-83.939l-1.701-2.847c-1.143-1.714-4.093-3.282-8.846-4.712-4.764-1.427-10.853-1.663-18.278-.712l-82.224.568c-1.332-.472-3.234-.428-5.712.144l-3.713.859-1.431.715-1.136.859c-.952.568-1.999 1.567-3.142 2.995-1.137 1.423-2.088 3.093-2.848 4.996-8.952 23.031-19.13 44.444-30.553 64.238-7.043 11.803-13.511 22.032-19.418 30.693-5.899 8.658-10.848 15.037-14.842 19.126-4 4.093-7.61 7.372-10.852 9.849-3.237 2.478-5.708 3.525-7.419 3.142-1.715-.383-3.33-.763-4.859-1.143-2.663-1.714-4.805-4.045-6.42-6.995-1.622-2.95-2.714-6.663-3.285-11.136-.568-4.476-.904-8.326-1-11.563-.089-3.233-.048-7.806.145-13.706.198-5.903.287-9.897.287-11.991 0-7.234.141-15.085.424-23.555.288-8.47.521-15.181.716-20.125.194-4.949.284-10.185.284-15.705s-.336-9.849-1-12.991a44.442 44.442 0 0 0-2.99-9.137c-1.335-2.95-3.289-5.232-5.853-6.852-2.569-1.618-5.763-2.902-9.564-3.856-10.089-2.283-22.936-3.518-38.547-3.71-35.401-.38-58.148 1.906-68.236 6.855-3.997 2.091-7.614 4.948-10.848 8.562-3.427 4.189-3.905 6.475-1.431 6.851 11.422 1.711 19.508 5.804 24.267 12.275l1.715 3.429c1.334 2.474 2.666 6.854 3.999 13.134 1.331 6.28 2.19 13.227 2.568 20.837.95 13.897.95 25.793 0 35.689-.953 9.9-1.853 17.607-2.712 23.127-.859 5.52-2.143 9.993-3.855 13.418-1.715 3.426-2.856 5.52-3.428 6.28-.571.76-1.047 1.239-1.425 1.427a21.387 21.387 0 0 1-7.71 1.431c-2.667 0-5.901-1.334-9.707-4-3.805-2.666-7.754-6.328-11.847-10.992-4.093-4.665-8.709-11.184-13.85-19.558-5.137-8.374-10.467-18.271-15.987-29.691l-4.567-8.282c-2.855-5.328-6.755-13.086-11.704-23.267-4.952-10.185-9.329-20.037-13.134-29.554-1.521-3.997-3.806-7.04-6.851-9.134l-1.429-.859c-.95-.76-2.475-1.567-4.567-2.427a30.301 30.301 0 0 0-6.567-1.854l-78.229.568c-7.994 0-13.418 1.811-16.274 5.428l-1.143 1.711c-.571.953-.859 2.475-.859 4.57 0 2.094.571 4.664 1.714 7.707 11.42 26.84 23.839 52.725 37.257 77.659 13.418 24.934 25.078 45.019 34.973 60.237 9.897 15.229 19.985 29.602 30.264 43.112 10.279 13.515 17.083 22.176 20.412 25.981 3.333 3.812 5.951 6.662 7.854 8.565l7.139 6.851c4.568 4.569 11.276 10.041 20.127 16.416 8.853 6.379 18.654 12.659 29.408 18.85 10.756 6.181 23.269 11.225 37.546 15.126 14.275 3.905 28.169 5.472 41.684 4.716h32.834c6.659-.575 11.704-2.669 15.133-6.283l1.136-1.431c.764-1.136 1.479-2.901 2.139-5.276.668-2.379 1-5 1-7.851-.195-8.183.428-15.558 1.852-22.124 1.423-6.564 3.045-11.513 4.859-14.846 1.813-3.33 3.859-6.14 6.136-8.418 2.282-2.283 3.908-3.666 4.862-4.142.948-.479 1.705-.804 2.276-.999 4.568-1.522 9.944-.048 16.136 4.429 6.187 4.473 11.99 9.996 17.418 16.56 5.425 6.57 11.943 13.941 19.555 22.124 7.617 8.186 14.277 14.271 19.985 18.274l5.708 3.426c3.812 2.286 8.761 4.38 14.853 6.283 6.081 1.902 11.409 2.378 15.984 1.427l73.087-1.14c7.229 0 12.854-1.197 16.844-3.572 3.998-2.379 6.373-5 7.139-7.851.764-2.854.805-6.092.145-9.712-.677-3.611-1.344-6.136-2.008-7.563z" fill="#fff" opacity="1" data-original="#fff" class=""></path></g></svg>
+    </a>
+
+    <a href="https://mailen-rp.su" class="social-link website" target="_blank" aria-label="Сайт">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 512h512V0H0Z" fill="#ffffff" opacity="1" data-original="#ffffff"></path></clipPath></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)"><path d="M0 0c0-132.548-108.451-241-241-241S-482-132.548-482 0s108.451 241 241 241S0 132.548 0 0Z" style="stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(497 256)" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#ffffff" class=""></path><path d="M0 0v482" style="stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(256 15)" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#ffffff" class=""></path><path d="M0 0c0-132.548-53.726-241-120-241S-240-132.548-240 0s53.726 241 120 241S0 132.548 0 0Z" style="stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(376 256)" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#ffffff" class=""></path><path d="M0 0h-482" style="stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(497 256)" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#ffffff" class=""></path><path d="M0 0h-396.92" style="stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(454.46 391)" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#ffffff" class=""></path><path d="M0 0h-396.92" style="stroke-width:30;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1" transform="translate(454.46 121)" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity="" data-original="#fff" class=""></path></g></g></svg>
+    </a>
+
+    <a href="https://discord.gg/rEAqy9VH" class="social-link discord" target="_blank" aria-label="Discord">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="50" height="50" x="0" y="0" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M433.43 93.222a422.256 422.256 0 0 0-104.216-32.324 1.582 1.582 0 0 0-1.675.792c-4.501 8.005-9.486 18.447-12.977 26.655-39.353-5.892-78.505-5.892-117.051 0-3.492-8.39-8.658-18.65-13.179-26.655a1.643 1.643 0 0 0-1.675-.792c-36.568 6.298-71.562 17.33-104.216 32.324a1.49 1.49 0 0 0-.686.589c-66.376 99.165-84.56 195.893-75.64 291.421.04.467.303.914.666 1.198 43.793 32.161 86.215 51.685 127.848 64.627a1.656 1.656 0 0 0 1.796-.589c9.848-13.449 18.627-27.63 26.154-42.543.444-.873.02-1.909-.888-2.255-13.925-5.282-27.184-11.723-39.939-19.036-1.009-.589-1.09-2.032-.161-2.723a218.562 218.562 0 0 0 7.932-6.217 1.585 1.585 0 0 1 1.655-.224c83.792 38.257 174.507 38.257 257.31 0a1.578 1.578 0 0 1 1.675.203 204.307 204.307 0 0 0 7.952 6.237c.928.691.867 2.134-.141 2.723-12.755 7.456-26.014 13.754-39.959 19.016a1.633 1.633 0 0 0-.867 2.275c7.689 14.892 16.468 29.073 26.134 42.523.404.569 1.13.813 1.796.609 41.835-12.941 84.257-32.466 128.05-64.627a1.64 1.64 0 0 0 .666-1.178c10.676-110.441-17.881-206.376-75.7-291.421a1.299 1.299 0 0 0-.664-.608zM171.094 327.065c-25.227 0-46.014-23.16-46.014-51.604s20.383-51.604 46.014-51.604c25.831 0 46.417 23.364 46.013 51.604 0 28.444-20.384 51.604-46.013 51.604zm170.127 0c-25.226 0-46.013-23.16-46.013-51.604s20.383-51.604 46.013-51.604c25.832 0 46.417 23.364 46.014 51.604 0 28.444-20.181 51.604-46.014 51.604z" fill="#fff" opacity="1" data-original="#000000" class=""/></g></svg>
+    </a>
+  </div>
+
+  <div class="swiper mySwiper">
+    <!-- навигация -->
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+    <div class="swiper-wrapper">
+      <!-- LSSD -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="assets/images/lssd.png" alt="LSSD" />
+          <div class="card-title">Los Santos County Sheriff's Department</div>
+          <div class="overlay">
+            <h3>LSSD</h3>
+            <p>
+              <b>В шляпе и со звездой, соблюдая традиции служения.</b><br>Правоохранительное агентство округа, предоставляющее полицейские и пенитенциарные услуги на территории пригорода Лос-Сантоса аж с 1850 года!
+            </p>
+            <a href="https://sa-sf.ru/lssd" class="btn" target="_blank">Перейти</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Parks -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="assets/images/sang.png" alt="SANG" />
+          <div class="card-title">San Andreas National Guard</div>
+          <div class="overlay">
+            <h3>SANG</h3>
+            <p>
+              <b>Гвардейцы всегда готовы и всегда здесь.</b><br>Настоящая армия внутри одного из богатейших штатов Америки. Гарантирует свободу и независимость государства, защищает регион.
+            </p>
+            <a href="https://sa-sf.ru/sang" class="btn" target="_blank">Перейти</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SAPR -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="assets/images/sapr.png" alt="SAPR" />
+          <div class="card-title">San Andreas Department of Parks and Recreation</div>
+          <div class="overlay">
+            <h3>SADPR</h3>
+            <p>
+              <b>Рейнджеры вместе с землей и водой.</b><br>Вовсе не гоняют бобров, а занимаются важной и ответственной работой: охраняют государственные парки, зоны отдыха и бескрайние пляжи Золотого штата.
+            </p>
+            <a href="https://sa-sf.ru/parks" class="btn" target="_blank">Перейти</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LSPD -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="assets/images/lspd.png" alt="LSPD" />
+          <div class="card-title">Los Santos Police Department</div>
+          <div class="overlay">
+            <h3>LSPD</h3>
+            <p>
+              <b>Люди, которые служат и защищают.</b><br>Полицейский департамент Лос-Сантоса является крупнейшим в Соединенных Штатах. Только представьте, свыше 11 тысяч сотрудников!
+            </p>
+            <a href="https://sa-sf.ru/lspd" class="btn" target="_blank">Перейти</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LSFD -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="assets/images/lsfd.png" alt="LSFD" />
+          <div class="card-title">Los Santos Fire Department</div>
+          <div class="overlay">
+            <h3>LSFD</h3>
+            <p>
+              <b>И в огонь, и в воду.</b><br>Мимо выдающихся огнеборцев и парамедиков  Лос-Сантоса не пройдет ни один пожар или дорожно-транспортное происшествие. Служат с мужеством, честностью и гордостью.
+            </p>
+            <a href="https://sa-sf.ru/lsfd" class="btn" target="_blank">Перейти</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- LSGOV -->
+      <div class="swiper-slide">
+        <div class="card">
+          <img src="assets/images/lsch.png" alt="LSGOV" />
+          <div class="card-title">Los Santos Government</div>
+          <div class="overlay">
+            <h3>LSGOV</h3>
+            <p>
+              <b>Город Ангелов объединяет в себе всё.</b><br>Местное самоуправление этого города представлено офисом мэра и городским советом. Здесь решаются вопросы городского устройства.
+            </p>
+            <a href="https://sa-sf.ru/lsgov" class="btn" target="_blank">Перейти</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- swiper -->
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      effect: "coverflow",
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: "auto",
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+      coverflowEffect: {
+        rotate: 45,
+        stretch: 0,
+        depth: 120,
+        modifier: 1,
+        slideShadows: true,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      on: {
+        init: function () {
+        },
+      },
+    });
+
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        swiper.autoplay.stop();
+      });
+
+      card.addEventListener('mouseleave', () => {
+        swiper.autoplay.start();
+      });
+    });
+
+        window.addEventListener('load', function() {
+      const loaderWrapper = document.querySelector('.loader-wrapper');
+      loaderWrapper.classList.add('fade-out');
+      loaderWrapper.addEventListener('transitionend', function() {
+        if (loaderWrapper.classList.contains('fade-out')) {
+          loaderWrapper.remove();
+        }
+      });
+    });
+  </script>
+  <script src="assets/js/clouds.js"></script>
+</body>
+
+</html>
